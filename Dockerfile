@@ -1,5 +1,7 @@
 FROM consol/ubuntu-xfce-vnc
 
+USER 0
+
 # PREPARE
 RUN apt-get update; apt-get install xz-utils
 RUN mkdir /opt/install; \
