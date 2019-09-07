@@ -3,7 +3,7 @@ FROM consol/ubuntu-xfce-vnc
 USER 0
 
 # PREPARE
-RUN apt-get update; apt-get install xz-utils
+RUN apt-get update; apt-get install xz-utils git -y
 RUN mkdir /opt/install; \
     mkdir /opt/install/javas; \
     mkdir /opt/install/maven; \
@@ -39,7 +39,7 @@ RUN tar -zxvf /opt/install/maven.tar.gz -C /opt/install/maven
 
 RUN tar -zxvf /opt/install/intellij.tar.gz -C /opt/install/intellij
 
-RUN tar -zxvf /opt/install/node.tar.xz -C /opt/install/node
+RUN tar -xvf /opt/install/node.tar.xz -C /opt/install/node
 
 RUN tar -zxvf /opt/install/vscode.tar.gz -C /opt/install/vscode
 
