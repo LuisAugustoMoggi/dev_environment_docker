@@ -28,18 +28,18 @@ ADD https://nodejs.org/dist/v12.10.0/node-v12.10.0-linux-x64.tar.xz /opt/install
 ADD https://go.microsoft.com/fwlink/?LinkID=620884 /opt/install/vscode.tar.gz
 
 # EXTRACT
-tar -zxvf /opt/install/javas/jdk9.tar.gz -C /opt/install/javas
-tar -zxvf /opt/install/javas/jdk10.tar.gz -C /opt/install/javas
-tar -zxvf /opt/install/javas/jdk11.tar.gz -C /opt/install/javas
-tar -zxvf /opt/install/javas/jdk12.tar.gz -C /opt/install/javas
+RUN tar -zxvf /opt/install/javas/jdk9.tar.gz -C /opt/install/javas
+RUN tar -zxvf /opt/install/javas/jdk10.tar.gz -C /opt/install/javas
+RUN tar -zxvf /opt/install/javas/jdk11.tar.gz -C /opt/install/javas
+RUN tar -zxvf /opt/install/javas/jdk12.tar.gz -C /opt/install/javas
 
-tar -zxvf /opt/install/maven.tar.gz -C /opt/install/maven
+RUN tar -zxvf /opt/install/maven.tar.gz -C /opt/install/maven
 
-tar -zxvf /opt/install/intellij.tar.gz -C /opt/install/intellij
+RUN tar -zxvf /opt/install/intellij.tar.gz -C /opt/install/intellij
 
-tar -zxvf /opt/install/node.tar.xz -C /opt/install/node
+RUN tar -zxvf /opt/install/node.tar.xz -C /opt/install/node
 
-tar -zxvf /opt/install/vscode.tar.gz -C /opt/install/vscode
+RUN tar -zxvf /opt/install/vscode.tar.gz -C /opt/install/vscode
 
 #CONFIG
 ENV JAVA_HOME=/opt/jdk
