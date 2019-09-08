@@ -49,3 +49,11 @@ ENV MAVEN_HOME=/opt/maven
 ENV NODE_HOME=/opt/node
 ENV VS_CODE_HOME=/opt/vscode
 ENV INTELLIJ_HOME=/opt/intellij
+
+ENV PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin:$NODE_HOME/bin:$INTELLIJ_HOME/bin:$VS_CODE_HOME/bin
+
+RUN ln -s /opt/install/javas/jdk-9.0.4 /opt/jdk
+RUN ln -s /opt/install/maven/apache-maven-3.6.2 /opt/maven
+RUN ln -s /opt/install/node/node-v12.10.0-linux-x64 /opt/node
+RUN ln -s /opt/install/intellij/idea-IC-192.6603.28/ /opt/intellij
+RUN ln -s /opt/install/vscode/VSCode-linux-x64/ /opt/vscode
